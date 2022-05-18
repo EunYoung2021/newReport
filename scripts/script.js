@@ -28,15 +28,13 @@ document.getElementById('save').addEventListener("click", function () {
                 
             }
         });
+        var resultArea = document.getElementById('canvas-result');
+        var link = document.createElement('a');
+        link.download = 'report.png';
+        link.href = img;
+        resultArea.appendChild(link);
+        link.click();
     })
     
     
 });
-
-
-
-
-
-
-
-
