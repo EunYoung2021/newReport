@@ -1,0 +1,31 @@
+@media (min-width: 576px){
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media only screen and (max-height : 860px){
+    .container{
+       width: 100vw;
+    }
+    #reportArea{
+       width: 90vw !important;
+ }
+    
+ #reportArea{
+    width: 1000px;
+    height: 690px;
+    resize: none;
+    background-attachment: local;
+    background-image:
+       linear-gradient(to right, white 10px, transparent 10px),
+       linear-gradient(to left, white 10px, transparent 10px),
+       repeating-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
+    line-height: 31px;
+    padding: 5px 10px;
+ }
+ /* #canvas-result{
+    width: 85%;
+
+ } */
+ }

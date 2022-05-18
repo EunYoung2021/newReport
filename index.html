@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <title>Canvas HTML5</title>
+          <!-- Bootstrap 4.3.1 CDN -->
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">          
+          <!-- my Style -->
+          <style>
+                    .container {
+                       display: flex;
+                       flex-direction: column;
+                       align-items: center;
+                       padding-top : 50px ;     
+                       width: 100vw;
+                    }
+                    .title{
+                       width: 700px;
+                       height: 100px;
+                       background-image: url('./images/title.png');
+                       background-repeat: none repeat;
+                    }
+                    .introduce{
+                       display: flex;
+                       flex-direction: row;
+                       justify-content: center;
+                       vertical-align: middle;
+                     }
+                     .introduce textarea {
+                        height: 25px;
+                        border: 0px;
+                        overflow: hidden;
+                        resize: none;
+                        box-sizing: border-box;
+                        margin: auto;
+                        position: relative;
+                        top: 5px;
+                        /* text-decoration:  underline; */
+                     }
+                     #reportArea{
+                        width: 55vw;
+                        height: 690px;
+                        resize: none;
+                        background-attachment: local;
+                        background-image:
+                           linear-gradient(to right, white 10px, transparent 10px),
+                           linear-gradient(to left, white 10px, transparent 10px),
+                           repeating-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
+                        line-height: 31px;
+                        padding: 5px 10px;
+                     }
+          </style>
+</head>
+<body style="vertical-align: middle;">
+    <div class="container">
+                    <center>
+          <div class="title"></div>
+          <div class="introduce">
+             <div style="margin: auto; font-weight: bolder;">학교 : <textarea id="inputSch" spellcheck="false"></textarea></div>
+             <div style="margin: auto; font-weight: bolder;">학반 : <textarea id="inputCls" spellcheck="false"></textarea></div>
+             <div style="margin: auto; font-weight: bolder;">이름 : <textarea id="inputNm" spellcheck="false"></textarea></div>
+          </div>
+          <div class="reportContainer">
+             <textarea id="reportArea" spellcheck="false"></textarea>
+          </div>
+         </center>
+      </div>
+      <center>
+         <div id="drawhere"> 
+                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <div id="save" class="btn btn-primary"> SAVE </div>
+                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         </div>
+         <img id="canvas-result" style="display:none; width: 60%" />
+      </center>
+    <!-- SweetAlert CDN -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- jQuery 3.3.1 CDN -->
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+    <!-- my Script -->
+    <script src="scripts/script.js"></script>
+    <script src="./scripts/clickToTouch.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</body>
+</html>
