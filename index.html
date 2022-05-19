@@ -15,10 +15,11 @@
                        width: 100vw;
                     }
                     .title{
-                       width: 700px;
+                       width: 500px;
                        height: 100px;
                        background-image: url('./images/title.png');
-                       background-repeat: none repeat;
+                       background-repeat: no-repeat;
+                       background-position: center;
                     }
                     .introduce{
                        display: flex;
@@ -38,7 +39,7 @@
                         /* text-decoration:  underline; */
                      }
                      #reportArea{
-                        width: 55vw;
+                        width: 80vw;
                         height: 690px;
                         resize: none;
                         background-attachment: local;
@@ -48,6 +49,9 @@
                            repeating-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
                         line-height: 31px;
                         padding: 5px 10px;
+                     }
+                     .reportContainer div{
+                        text-align: left;
                      }
           </style>
 </head>
@@ -61,7 +65,7 @@
              <div style="margin: auto; font-weight: bolder;">이름 : <textarea id="inputNm" spellcheck="false"></textarea></div>
           </div>
           <div class="reportContainer">
-             <textarea id="reportArea" spellcheck="false"></textarea>
+             <div contenteditable='true' id="reportArea" spellcheck="false"></div>
           </div>
          </center>
       </div>
