@@ -1,5 +1,4 @@
 body{
-   background-image: url(../images/ex.jpg);
    background-repeat: no-repeat;
    background-size: cover;
    background-position: inherit
@@ -29,6 +28,7 @@ body{
        repeating-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
     line-height: 31px;
     padding: 5px 10px;
+    background-image: url('../images/ex.jpg');
  }
  /* #canvas-result{
     width: 85%;
