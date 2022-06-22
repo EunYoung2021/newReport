@@ -8,7 +8,8 @@ const containerElem = document.querySelector('.container');
 // save the picture is drawn .. 
 document.getElementById('save').addEventListener("click", function () {
     // let dataURL = canvas.toDataURL(); // default is 'image/png' ..
-    let screen = $('.container');
+    // let screen = $('.container');
+    let screen = $('body');
     // console.log(screen[0])
     
     html2canvas(screen[0]).then(function(canvas) {

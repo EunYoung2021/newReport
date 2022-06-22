@@ -1,3 +1,9 @@
+body{
+   background-image: url(/images/ex.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: inherit
+}
 @media (min-width: 576px){
     .container {
         max-width: 540px;

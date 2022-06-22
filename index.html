@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
           <meta charset="UTF-8">
           <title>Canvas HTML5</title>
           <!-- Bootstrap 4.3.1 CDN -->
           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">          
+          <link rel="stylesheet" href="css/index.css">          
           <!-- my Style -->
           <style>
                     .container {
@@ -15,17 +16,25 @@
                        width: 100vw;
                     }
                     .title{
-                       width: 500px;
+                       /* width: 500px; */
                        height: 100px;
-                       background-image: url('./images/title.png');
+                       /* background-image: url('./images/title.png');
                        background-repeat: no-repeat;
-                       background-position: center;
+                       background-position: center; */
+
+                       font-size: 40px;
+                       font-weight: bolder;
+
+                       vertical-align: middle;
+                       justify-content: center;
+                       align-items: center;
                     }
                     .introduce{
                        display: flex;
-                       flex-direction: row;
+                       flex-direction: column;
                        justify-content: center;
                        vertical-align: middle;
+                       align-items: flex-start
                      }
                      .introduce textarea {
                         height: 25px;
@@ -37,6 +46,8 @@
                         position: relative;
                         top: 5px;
                         /* text-decoration:  underline; */
+
+                        background-color: rgba(255, 255, 255, 0.429);
                      }
                      #reportArea{
                         width: 80vw;
@@ -44,9 +55,9 @@
                         resize: none;
                         background-attachment: local;
                         background-image:
-                           linear-gradient(to right, white 10px, transparent 10px),
-                           linear-gradient(to left, white 10px, transparent 10px),
-                           repeating-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
+                           linear-gradient(to right, rgba(255, 255, 255, 0.43) 10px, transparent 10px),
+                           linear-gradient(to left, rgba(255, 255, 255, 0.43) 10px, transparent 10px),
+                           repeating-linear-gradient(rgba(255, 255, 255, 0.43), rgba(255, 255, 255, 0.43) 30px, #ccc 30px, #ccc 31px, white 31px);
                         line-height: 31px;
                         padding: 5px 10px;
                      }
@@ -56,19 +67,24 @@
           </style>
 </head>
 <body style="vertical-align: middle;">
+   <!-- <center> -->
     <div class="container">
-                    <center>
-          <div class="title"></div>
-          <div class="introduce">
-             <div style="margin: auto; font-weight: bolder;">학교 : <textarea id="inputSch" spellcheck="false"></textarea></div>
-             <div style="margin: auto; font-weight: bolder;">학반 : <textarea id="inputCls" spellcheck="false"></textarea></div>
-             <div style="margin: auto; font-weight: bolder;">이름 : <textarea id="inputNm" spellcheck="false"></textarea></div>
-          </div>
-          <div class="reportContainer">
+         <div class="title">독후감상문</div>
+         <div class="introduce">
+             <!-- <div style="margin: auto; font-weight: bolder;">나오는 악기 : <textarea id="inputSch" spellcheck="false"></textarea></div>
+             <div style="margin: auto; font-weight: bolder;">작곡가 : <textarea id="inputCls" spellcheck="false"></textarea></div>
+             <div style="margin: auto; font-weight: bolder;">시대 : <textarea id="inputNm" spellcheck="false"></textarea></div> -->
+             
+             <div style="font-weight: bolder;">나오는 악기 : <textarea id="inputSch" spellcheck="false"></textarea></div>
+             <div style="font-weight: bolder;">작곡가 : <textarea id="inputCls" spellcheck="false"></textarea></div>
+             <div style="font-weight: bolder;">시대 : <textarea id="inputNm" spellcheck="false"></textarea></div>
+             <div style="font-weight: bolder;">감상 후 느낀점 : </div>
+         </div>
+         <div class="reportContainer">
              <div contenteditable='true' id="reportArea" spellcheck="false"></div>
-          </div>
-         </center>
+         </div>
       </div>
+   <!-- </center> -->
       <center>
          <div id="drawhere"> 
                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
