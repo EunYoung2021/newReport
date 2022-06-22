@@ -12,12 +12,14 @@
                        display: flex;
                        flex-direction: column;
                        align-items: center;
-                       padding-top : 50px ;     
-                       width: 100vw;
+                       padding-top : 50px ;
+                       
+                       background-image: url('../images/ex.jpg');
+                       background-repeat: no-repeat;
+                       background-position: inherit;
+                       background-size: cover;
                     }
                     .title{
-                       /* width: 500px; */
-                       height: 100px;
                        /* background-image: url('./images/title.png');
                        background-repeat: no-repeat;
                        background-position: center; */
@@ -30,11 +32,25 @@
                        align-items: center;
                     }
                     .introduce{
-                       display: flex;
-                       flex-direction: column;
-                       justify-content: center;
-                       vertical-align: middle;
-                       align-items: flex-start
+                        width: 20%;
+
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        vertical-align: middle;
+                        align-items: flex-start;
+
+                        resize: none;
+                        background-attachment: local;
+                        background-image:
+                           linear-gradient(to right, rgba(255, 255, 255, 0.033) 10px, transparent 10px),
+                           linear-gradient(to left, rgba(255, 255, 255, 0.033) 10px, transparent 10px),
+                           repeating-linear-gradient(rgba(255, 255, 255, 0.033), rgba(255, 255, 255, 0.033) 30px, #ccc 30px, #ccc 31px, white 31px);
+                        line-height: 31px;
+                     }
+                     .introduce div{
+                        line-height: 30px;
+                        height: 30px;
                      }
                      .introduce textarea {
                         height: 25px;
@@ -45,9 +61,8 @@
                         margin: auto;
                         position: relative;
                         top: 5px;
-                        /* text-decoration:  underline; */
 
-                        background-color: rgba(255, 255, 255, 0.429);
+                        background-color: transparent;
                      }
                      #reportArea{
                         width: 80vw;
@@ -55,9 +70,9 @@
                         resize: none;
                         background-attachment: local;
                         background-image:
-                           linear-gradient(to right, rgba(255, 255, 255, 0.43) 10px, transparent 10px),
-                           linear-gradient(to left, rgba(255, 255, 255, 0.43) 10px, transparent 10px),
-                           repeating-linear-gradient(rgba(255, 255, 255, 0.43), rgba(255, 255, 255, 0.43) 30px, #ccc 30px, #ccc 31px, white 31px);
+                           linear-gradient(to right, rgba(255, 255, 255, 0.033) 10px, transparent 10px),
+                           linear-gradient(to left, rgba(255, 255, 255, 0.033) 10px, transparent 10px),
+                           repeating-linear-gradient(rgba(255, 255, 255, 0.033), rgba(255, 255, 255, 0.033) 30px, #ccc 30px, #ccc 31px, white 31px);
                         line-height: 31px;
                         padding: 5px 10px;
                      }
@@ -68,22 +83,21 @@
 </head>
 <body style="vertical-align: middle;">
    <!-- <center> -->
+    <center>
+      <div class="title">독후감상문</div>
+   </center>
     <div class="container">
-         <div class="title">독후감상문</div>
-         <div class="introduce">
-             <!-- <div style="margin: auto; font-weight: bolder;">나오는 악기 : <textarea id="inputSch" spellcheck="false"></textarea></div>
-             <div style="margin: auto; font-weight: bolder;">작곡가 : <textarea id="inputCls" spellcheck="false"></textarea></div>
-             <div style="margin: auto; font-weight: bolder;">시대 : <textarea id="inputNm" spellcheck="false"></textarea></div> -->
-             
-             <div style="font-weight: bolder;">나오는 악기 : <textarea id="inputSch" spellcheck="false"></textarea></div>
-             <div style="font-weight: bolder;">작곡가 : <textarea id="inputCls" spellcheck="false"></textarea></div>
-             <div style="font-weight: bolder;">시대 : <textarea id="inputNm" spellcheck="false"></textarea></div>
-             <div style="font-weight: bolder;">감상 후 느낀점 : </div>
-         </div>
          <div class="reportContainer">
-             <div contenteditable='true' id="reportArea" spellcheck="false"></div>
+            <div class="introduce">
+               <div style="font-weight: bolder;">나오는 악기 : <textarea id="inputSch" spellcheck="false"></textarea></div>
+               <div style="font-weight: bolder;" disabled>작곡가 : <textarea id="inputCls" spellcheck="false"></textarea></div>
+               <div style="font-weight: bolder;">시대 : <textarea id="inputNm" spellcheck="false"></textarea></div>
+               <div style="font-weight: bolder; text-align: left;" disabled>감상 후 느낀점 : </div>
+            </div>
+            
+            <div contenteditable='true' id="reportArea" spellcheck="false">
+            </div>
          </div>
-      </div>
    <!-- </center> -->
       <center>
          <div id="drawhere"> 
